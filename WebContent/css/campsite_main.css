@@ -1,0 +1,70 @@
+/*전역적 스타일 정의*/
+*{margin:0;padding:0;font-family:'맑은 고딕'}
+html,body{margin:0;padding:0;border:none}
+
+/* 주요 레이아웃 정의 */
+div.warp{margin:0;padding:0;height:100%;}
+div#header{margin:0;height:90px;background:#fff;border-bottom:1px solid #000}
+div#header h1{margin-top:-1000px;/*h1 태그는 형식 상 갖추고, 스타일시트에서 고의적으로 제외*/}
+div#footer{position:absolute;bottom:0;width:100%;height:20px;text-align:center;}
+div#contents{position:absolute;top:91px;bottom:20px;left:0;right:0;}
+
+div#left{width:370px;height:100%;border-right:2px solid #000}
+div#mapArea{position:absolute;left:372px;top:0;right:0;bottom:0}
+div#map{width:100%;height:100%}
+.copyright{font:bold 10px/20px tahoma;color:#999}
+.topDecal{background:#6A5ACD;height:25px;width:100%;}
+
+/* 로고 */
+div#campsiteLogo{;background-image:url('../images/Tripsite_logo.PNG');width:356px;height:38px;margin:10px 0 0 50px;}
+
+/* 좌측 Global Navigation Bar 영역 */
+div.gnb{position:relative;width:74px;height:100%;background: #6A5ACD}
+
+/* 좌측 Global Navigation Bar 영역의 메뉴 */
+div.gnb li{position:relative;list-style: none;display: block;width:74px;height:72px;text-align: center;cursor:pointer;color:#fff}
+div.gnb li span{position:absolute;font:600 11px '맑은 고딕';bottom:4px;left:0;width:100%;text-decoration: none;}
+div.gnb li:hover{background-color: #0f3a63;}
+div.gnb li:active{background-color: #F3E224!important;color:#0f3a63!important;}
+div.gnb li.selected{background-color: #0f3a63;}
+
+/* 좌측 Global Navigation Bar 영역의 메뉴 이미지
+	; 하나의 배경이미지에 여러 이미지를 두고  여러개의 이미지를 개별적으로 사용하는 기법을 이미지스프라이트 라고 함, HTTP의 요청회수를 줄여주어 속도 향상
+*/
+li.gnbicon{background-image:url('../images/Icon.png');background-repeat:no-repeat;}
+.icon1{background-position:0 0; }
+.icon2{background-position:0 -72px; }
+.icon3{background-position:0 -144px; }
+.icon4{background-position:0 -216px; }
+
+/* 좌측 영역의 컨텐츠 영역*/
+div.leftContents{position:absolute;top:0;left:75px;bottom:0;width:270px;padding:20px 10px;}
+
+/* 좌측 영역의 컨텐츠 영역 하위 엘레멘트 스타일*/
+div.leftContents h3{margin:10px 0;font:bold 18pt '맑은 고딕'; color:#6A5ACD;}
+div.leftContents p{font:normal 10pt '맑은 고딕'; color:#333}
+div.leftContents button{background:#6A5ACD;border:none;border-radius:4px;padding:5px 8px;color:#fff;font:bold 14px '맑은 고딕'}
+div.leftContents button:hover{background:#0f3a63;}
+div.leftContents button:active{background-color: #F3E224!important;color:#0f3a63!important;}
+
+/* 좌측 영역의 컨텐츠 영역의 목록 엘레멘트 스타일*/
+ul.campsiteList,table.campsiteTable{background:#efefef;border:1px solid #ccc;border-radius:10px;margin:20px 0;}
+ul.campsiteList li{list-style: none;border-top:1px solid #fff;padding: 4px 20px;font: bold 14px '맑은 고딕';cursor:pointer}
+ul.campsiteList li:FIRST-CHILD {border-top:none;/*첫번째는 예외*/}
+ul.campsiteList li:hover{background:#0f3a63;color:#fff}
+ul.campsiteList li:hover:FIRST-CHILD{border-top-left-radius:10px;border-top-right-radius:10px;}
+ul.campsiteList li:hover:last-child{border-bottom-left-radius:10px;border-bottom-right-radius:10px}
+
+/* 좌측 영역의 컨텐츠 영역의 목록 테이블 스타일*/
+table.campsiteTable{width:100%;}
+table.campsiteTable td,table.campsiteTable th{border-top:1px solid #fff;padding:4px 5px;font:14px '맑은 고딕';}
+table.campsiteTable tr:FIRST-CHILD td,table.campsiteTable tr:FIRST-CHILD th{border-top:none;}
+table.campsiteTable th {font-weight: bold}
+
+/* 정보 조회 창 */
+div#FeatureInfo{position: absolute;display:none;width:450px;height:250px;background: rgba(255,255,255,.9);left:410px;top:125px;z-index:100;}
+div#FeatureInfo h3{margin:10px 20px; font:normal 24px '맑은 고딕'}
+div#FeatureInfo th, div#FeatureInfo td{padding:3px 5px;}
+div#FeatureInfo th{color:#0AF;font:bold 10pt '맑은 고딕'}
+div#FeatureInfo td{color:#333;font:normal 10pt '맑은 고딕'}
+div#FeatureInfo div.btnClose{position:absolute;background:url('../images/btnX.png');width:19px;height:19px;top:19px;right:19px;cursor:hover;}
